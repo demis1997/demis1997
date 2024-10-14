@@ -5,6 +5,7 @@
 ## 👋 Hi there! Thanks for stalking!
 
 I'm just a passionate developer who loves coding to some chill lofi beats while my bulldog keeps me company 🐶. I’m into all things tech—especially when it involves blockchain and security
+<br>
 <br>Cool fact: The meaning of life is 42
 
 
