@@ -2,7 +2,7 @@
   <img src="https://camo.githubusercontent.com/1ecb2e9568d5f780044c7f401a8e54226e921a9fa74868131f82bb45872e0214/68747470733a2f2f63646e622e61727473746174696f6e2e636f6d2f702f6173736574732f696d616765732f696d616765732f3033362f3132352f3430352f6f726967696e616c2f69676f722d667265697461732d6d6573612e6769663f31363136373739353632" alt="Coding GIF" width="600"/>
 </div>
 
-## 👋 Hi there! Thanks for stalking!
+## 👋 Well hello there!
 
 I'm just a passionate developer who loves coding to some chill lofi beats while my bulldog keeps me company 🐶. I’m into all things tech—especially when it involves blockchain and security
 <br>
@@ -34,9 +34,9 @@ Feel free to reach out to me on any of the platforms below:
 ### 🧑‍💻 What I'm up to
 Currently, I’m working with account abstraction and MPC threshold cryptography 💻.
 
-### 🌟 Fun Fact
+### 🌟 Interests
 I embody the true meaning of geek. CyberPunk type movies, sci-fi books, random gadgets and ofcourse, video games!
 
 ---
 
-Thanks for stopping by! 🚀
+Thanks for stalking by! 🚀
