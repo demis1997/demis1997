@@ -35,7 +35,7 @@ Feel free to reach out to me on any of the platforms below:
 Currently, I’m working with account abstraction and MPC threshold cryptography 💻.
 
 ### 🌟 Interests
-I embody the true meaning of geek. CyberPunk type movies, sci-fi books, random gadgets and ofcourse, video games!
+CyberPunk type movies, sci-fi books, random gadgets, synthpop and ofcourse, video games!
 
 ---
 
