@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="[https://camo.githubusercontent.com/1ecb2e9568d5f780044c7f401a8e54226e921a9fa74868131f82bb45872e0214/68747470733a2f2f63646e622e61727473746174696f6e2e636f6d2f702f6173736574732f696d616765732f696d616765732f3033362f3132352f3430352f6f726967696e616c2f69676f722d667265697461732d6d6573612e6769663f31363136373739353632](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2F012e716ba09bab32c9f3ea163b7663af%2Ftenor.gif%3Fitemid%3D5471468&f=1&nofb=1&ipt=bcb91fa541a53c1c7c68db31808247e7e872cf459657d9dc66370c60b740f379)" alt="Coding GIF" width="600"/>
+<div align="center">
+  <img src="https://media1.tenor.com/images/012e716ba09bab32c9f3ea163b7663af/tenor.gif?itemid=5471468" alt="Coding GIF" width="600">
 </div>
 
 ## 👋 Well hello there!
