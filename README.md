@@ -15,6 +15,7 @@ I'm just a passionate developer who loves coding to some chill lofi beats while 
 <div align="center">
 
 ![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)
+![Rust](https://img.shields.io/badge/RUST-000000?logo=rust&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
 ![Assembly](https://img.shields.io/badge/Assembly-%23A8B9CC.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
