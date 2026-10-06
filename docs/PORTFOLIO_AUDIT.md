@@ -14,7 +14,7 @@ kata2-trustee was inspected but not selected as an original flagship: it retains
 
 ## Changes
 
-Profile README: replaces decorative widgets with engineering positioning, problem/solution/evidence summaries, supported skills and existing LinkedIn/GitHub links. Top three project READMEs: actual architecture, commands, limitations, evidence and deeper docs. Existing useful README content is preserved in linked historical documents. cryptoanalyzer receives a lightweight offline workflow for syntax and existing dependency-free fixture scoring; no paid calls or credentials.
+Profile README: replaces decorative widgets with engineering positioning, problem/solution/evidence summaries, supported skills and existing LinkedIn/GitHub links. Top three project READMEs: actual architecture, commands, limitations, evidence and deeper docs. Existing useful README content is preserved in linked historical documents. cryptoanalyzer receives a lightweight offline workflow for syntax and existing fixture scoring; no paid calls or credentials.
 
 SiteProof screenshots are existing actual fixture screenshots. cryptoanalyzer screenshot is a real local workbench capture, with the default illustrative graph explicitly labelled. IronLedger is backend/CLI-only; no fabricated UI screenshot is supplied.
 
