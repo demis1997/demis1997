@@ -1,44 +1,19 @@
-<div align="center">
-<div align="center">
-  <img src="https://media1.tenor.com/images/012e716ba09bab32c9f3ea163b7663af/tenor.gif?itemid=5471468" alt="Coding GIF" width="600">
-</div>
+# Dimitris Konstantinou
 
-## 👋 Well hello there!
+**Software engineer building applied AI systems, with a background in backend systems, blockchain security and cryptographic infrastructure.**
 
-I'm just a passionate developer who loves coding to some chill lofi beats while my bulldog keeps me company 🐶. I’m into all things tech—especially when it involves blockchain and security
-<br>
-<br>Cool fact: The meaning of life is 42
+I focus on systems whose outputs can be inspected and tested: grounded AI workflows, durable backend state, and explicit security boundaries. My current flagship project is SiteProof, where a generated redesign must pass executable checks before a reviewer can accept it.
 
+## Selected work
 
-### 🚀 Tech Stack
+- **[SiteProof](https://github.com/demis1997/siteproof)** — Evidence-backed homepage auditing and private redesign verification. Typed findings, fact provenance, hybrid-retrieval infrastructure and checkpointed workflows connect observation to bounded repair and acceptance. Real Docker/browser/DB/storage fixture checks cover regression rejection and restart recovery; live model quality, semantic retrieval and inference costs remain blocked, and human review is pending.
+- **[IronLedger](https://github.com/demis1997/IronLedger)** — Rust double-entry ledger with atomic PostgreSQL writes, transactional outbox, idempotency, replay and reconciliation. Focused local tests cover balancing and duplicate delivery; full-stack validation is incomplete and the inspected main CI run failed.
+- **[cryptoanalyzer](https://github.com/demis1997/cryptoanalyzer)** — DeFi research workbench combining protocol adapters, document ingestion, graph persistence and source-aware heuristic scoring. Fixture scoring checks are reproducible; live data adapters and optional models need broader validation. Scores are not validated predictions of financial risk.
+- **[Iris Sales Coach](https://github.com/demis1997/iris-sales-coach)** — Sales-coaching prototype with 13 versioned prompts, structured schemas and a typed provider interface. Ten mock-provider AI tests and the permission test passed locally; live inference and telephony quality are not established by these checks. Built with Lovable; no customer outcomes are claimed.
+- **[EVM Security Lab](https://github.com/demis1997/evm-security-lab)** — Personal CTF writeups, exploit PoCs and Echidna properties covering reentrancy, storage layout, denial of service and AMM behavior. Educational security work, not a claim of production audit findings.
 
-<div align="center">
+## Tools demonstrated in these projects
 
-![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)
-![Rust](https://img.shields.io/badge/RUST-000000?logo=rust&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
-![Assembly](https://img.shields.io/badge/Assembly-%23A8B9CC.svg?style=for-the-badge&logo=assemblyscript&logoColor=white)
-![React](https://img.shields.io/badge/React-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+Python, TypeScript/JavaScript and Rust · FastAPI, React/Next.js and Express · PostgreSQL/pgvector, Redis and object storage · LangGraph, structured outputs and evaluation harnesses · Playwright, axe and Lighthouse · Solidity/EVM property testing · Docker and GitHub Actions.
 
-
-</div>
-
-### 📫 Let's Connect!
-Feel free to reach out to me on any of the platforms below:
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/demisk)
-- [![X](https://img.shields.io/badge/X-%231DA1F2.svg?style=for-the-badge&logo=x&logoColor=white)](https://x.com/ProgrammingBao)
-- [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/930447122896150569)
-
-### 🧑‍💻 What I'm up to
-Currently, I’m working with account abstraction and MPC threshold cryptography 💻.
-
-### 🌟 Interests
-CyberPunk type movies, sci-fi books, random gadgets, synthpop and ofcourse, video games!
-
----
-
-Thanks for stalking by! 🚀
+[LinkedIn](https://www.linkedin.com/in/demisk/) · [GitHub](https://github.com/demis1997)
