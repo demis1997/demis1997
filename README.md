@@ -17,3 +17,5 @@ I focus on systems whose outputs can be inspected and tested: grounded AI workfl
 Python, TypeScript/JavaScript and Rust · FastAPI, React/Next.js and Express · PostgreSQL/pgvector, Redis and object storage · LangGraph, structured outputs and evaluation harnesses · Playwright, axe and Lighthouse · Solidity/EVM property testing · Docker and GitHub Actions.
 
 [LinkedIn](https://www.linkedin.com/in/demisk/) · [GitHub](https://github.com/demis1997)
+
+[Public repository maintenance report](docs/ACCOUNT_MAINTENANCE.md) — source inspection, observed checks, draft changes and remaining limitations.
