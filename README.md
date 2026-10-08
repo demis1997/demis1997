@@ -1,5 +1,7 @@
 # Dimitris Konstantinou
-
+<p align="center">
+<img src="https://giphy.com/gifs/animation-spike-3o6fITbokMcsYrWE00" alt="Spike Spiegel — Cowboy Bebop" width="450" />
+</p>
 **Software engineer building applied AI systems, with a background in backend systems, blockchain security and cryptographic infrastructure.**
 
 I focus on systems whose outputs can be inspected and tested: grounded AI workflows, durable backend state, and explicit security boundaries. My current flagship project is SiteProof, where a generated redesign must pass executable checks before a reviewer can accept it.
