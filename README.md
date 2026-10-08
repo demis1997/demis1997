@@ -1,6 +1,6 @@
 # Dimitris Konstantinou
 <p align="center">
-<img src="https://giphy.com/gifs/animation-spike-3o6fITbokMcsYrWE00" alt="Spike Spiegel — Cowboy Bebop" width="450" />
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGk3MTBkbnIwcmo2dGFtdDgzcWYwcHE2Y2Y2YnBpcm11M3Vlb25udiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/11KzOet1ElBDz2/giphy.gif" alt="Spike Spiegel — Cowboy Bebop" width="450" />
 </p>
 **Software engineer building applied AI systems, with a background in backend systems, blockchain security and cryptographic infrastructure.**
 
