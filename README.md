@@ -6,19 +6,38 @@
 
 I build things that are supposed to be difficult to break. And occasionally things that break in very interesting ways.
 
-My background is in **security, cryptography, blockchain infrastructure, and backend engineering**. These days, I'm also building AI systems
+My home turf is **security architecture, application security, and blockchain infrastructure**: digital asset custody, tokenization, **MPC, threshold ECDSA, HSMs, and cryptographic key management**.
 
-Currently spending a lot of time with **Rust, Python, TypeScript, MPC, Solidity, and AI agents**.
+I build with **Rust, Python, TypeScript, and Solidity**, use **static analysis, fuzzing, and security testing** to challenge the happy path, and work across distributed systems and AI infrastructure.
 
 When I'm not staring at a terminal, you'll probably find me boxing, riding, or doing random sidequests.
+
+## 🔎 Open Source Security Contributions
+
+### [Semgrep](https://github.com/semgrep/semgrep)
+
+- **Open · [#11999](https://github.com/semgrep/semgrep/pull/11999)** — fix Go static-analysis false negatives involving calls in conditional initializers; improve statement-sequence matching, preserve scope and shadowing, and add regression coverage.
+
+### [Slither](https://github.com/crytic/slither)
+
+Solidity static-analysis contributions focused on gas efficiency, conservative detection, and regression tests:
+
+- **Open · [#3119](https://github.com/crytic/slither/pull/3119)** — detect literal revert strings eligible for custom errors, with error-ABI caveats.
+- **Open · [#3120](https://github.com/crytic/slither/pull/3120)** — identify fixed-size storage layouts that can use fewer slots; restrict suggestions to fresh layouts.
+- **Open · [#3121](https://github.com/crytic/slither/pull/3121)** — detect read-only external memory parameters that could use calldata, accounting for writes and aliases.
+- **Open · [#3122](https://github.com/crytic/slither/pull/3122)** — detect invariant scalar storage reads in isolated loops using control-flow and read/write analysis.
+- **Open · [#3123](https://github.com/crytic/slither/pull/3123)** — add conservative cacheable-accumulator metadata to existing `costly-loop` findings.
+- **Closed, unmerged · [#1707](https://github.com/crytic/slither/pull/1707)** — earlier gas-optimization detector proposal.
+
+*PR statuses checked 20 October 2026; open proposals are not merged features.*
 
 ## 🚀 Things I've been building
 
 ### 🔐 [Quorum Custody](https://github.com/demis1997/quorum-custody)
 
-An MPC custody system where no single signer holds the entire private key.
+A local Ethereum custody demo built around **2-of-3 threshold ECDSA** and Coinbase's cb-mpc, with separate signer processes.
 
-Built around real **2-of-3 threshold ECDSA**, Coinbase's cb-mpc, independent transaction approvals, and local Ethereum settlement. Even with one signer offline, the remaining two can still get the job done.
+Independent transaction approvals, signer-side policy checks, mutual TLS, and durable recovery paths make the trust boundaries concrete. Even with one signer offline, the remaining two can still get the job done.
 
 Turns out keeping private keys out of the wrong hands is a pretty interesting engineering problem.
 
@@ -26,13 +45,13 @@ Turns out keeping private keys out of the wrong hands is a pretty interesting en
 
 A double-entry financial ledger written in Rust.
 
-Atomic PostgreSQL transactions, idempotency, reconciliation, and event-driven processing. Basically, making sure money doesn't magically appear or disappear because two requests arrived at the same time.
+Per-asset balancing, atomic PostgreSQL writes, idempotency, event replay, and reconciliation, backed by unit and property tests. Basically, making sure money doesn't magically appear or disappear because two requests arrived at the same time.
 
 ### 🤖 [SiteProof](https://github.com/demis1997/siteproof)
 
 An AI-powered website auditor that doesn't just tell you your website needs work.
 
-It audits pages, proposes redesigns, and checks whether the changes actually pass before they're accepted.
+It audits pages, proposes redesigns, and checks whether the changes actually pass before they're accepted. Tenant boundaries, SSRF protections, isolated browser capture, bounded repairs, and human acceptance are part of the design.
 
 Because "the AI said it looks better" isn't exactly a testing strategy.
 
@@ -40,13 +59,13 @@ Because "the AI said it looks better" isn't exactly a testing strategy.
 
 A DeFi research workbench for digging into protocols, documents, and on-chain information.
 
-Combines protocol adapters, graph-based data, and source-aware scoring to make research a little less painful.
+Combines protocol adapters, document ingestion, graph-based data, and source-aware scoring. Source provenance and explicit missing inputs make the reasoning inspectable and research a little less painful.
 
 Still a research tool, not a crystal ball for predicting financial risk.
 
 ### 🎙️ [Iris Sales Coach](https://github.com/demis1997/iris-sales-coach)
 
-An AI sales-coaching prototype built around structured prompts, typed model interfaces, and repeatable tests.
+An AI sales-coaching prototype built around versioned prompts, typed model interfaces, permission checks, and repeatable mock-provider tests.
 
 The idea is simple: help salespeople get better without making them sit through another three-hour training presentation.
 
@@ -54,7 +73,15 @@ The idea is simple: help salespeople get better without making them sit through 
 
 An AI reply and sales copilot for creator agencies.
 
-Handles conversation context, creator personas, suggestions, product rules, and human review. A surprisingly interesting mix of AI orchestration, business logic, and trying to make software sound less like software.
+Organization-scoped data, encrypted provider credentials, deterministic product and safety checks, and human review put boundaries around conversation context and AI suggestions. A surprisingly interesting mix of AI orchestration, business logic, and trying to make software sound less like software.
+
+## 🧭 Security Research & Engineering Interests
+
+Current questions I'm exploring, usually with a threat model or a test harness nearby:
+
+- **Digital asset custody threat modeling:** signer trust boundaries, recovery, and MPC/HSM security.
+- **Application security:** static analysis, vulnerability detection, fuzzing, and useful regression tests.
+- **Cryptographic protocol security:** including what post-quantum cryptography could look like in EVM ecosystems.
 
 ## 🛠️ Things I work with
 
