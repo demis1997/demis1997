@@ -12,6 +12,8 @@ I build with **Rust, Python, TypeScript, and Solidity**, use **static analysis, 
 
 When I'm not staring at a terminal, you'll probably find me boxing, riding, or doing random sidequests.
 
+**[Security Research Index](https://github.com/demis1997/institutional-custody-security-research/blob/main/RESEARCH_INDEX.md)**
+
 [Security research](#featured-security-research) · [Current work](#currently-working-on) · [Open source](#open-source-security-contributions) · [Projects](#other-engineering-projects)
 
 ## Featured Security Research
@@ -28,23 +30,15 @@ The evidence distinguishes executed tests and a synthetic local-chain transfer f
 
 ## Currently Working On
 
-### Securing Institutional Digital Asset Custody on AWS
+### [Securing Institutional Digital Asset Custody on AWS](https://github.com/demis1997/aws-custody-security-lab)
 
-Exploring how to deploy and secure custody infrastructure across independent AWS trust domains. This is ongoing design and research, not a completed production deployment.
+Building a custody security lab around independently administered AWS trust domains. Implemented so far: modular Terraform, IAM/KMS/S3 policy definitions, private network infrastructure, a fourteen-scenario threat model, and reproducible compromise and recovery tests.
 
-Planned focus:
+The tests distinguish one compromised signer from a signing quorum, shared deployment authority from independent accounts, and encrypted backups from trustworthy recovery history. Terraform is validated with mocked AWS providers; no cloud infrastructure or native MPC integration has been deployed.
 
-- Isolate MPC participants across AWS accounts and security boundaries.
-- Evaluate AWS KMS and CloudHSM for key protection, starting with the actual MPC interface.
-- Design independent authorization and transaction policy enforcement.
-- Secure signer communication with mutual TLS.
-- Develop recovery, backup, and key rotation procedures.
-- Evaluate IAM, VPC isolation, audit logging, and infrastructure security.
-- Test failure recovery and compromise scenarios in an isolated lab.
+[Explore the lab](https://github.com/demis1997/aws-custody-security-lab) · [Validation evidence](https://github.com/demis1997/aws-custody-security-lab/blob/main/VALIDATION_REPORT.md) · [Quorum Custody](https://github.com/demis1997/quorum-custody)
 
-[Quorum Custody](https://github.com/demis1997/quorum-custody) · [AWS Institutional Custody Security Lab roadmap](https://github.com/demis1997/institutional-custody-security-research/blob/main/docs/AWS_CUSTODY_SECURITY_LAB_ROADMAP.md)
-
-A dedicated AWS architecture repository is planned. In parallel, I am researching hybrid post quantum custody authorization and migration paths that preserve spending and recovery boundaries.
+Ongoing post quantum custody research examines hybrid authorization and migration paths that preserve spending and recovery boundaries.
 
 ##  Custody Engineering
 
@@ -79,37 +73,23 @@ Solidity static-analysis contributions focused on gas efficiency, conservative d
 
 ###  [IronLedger](https://github.com/demis1997/IronLedger)
 
-A double-entry financial ledger written in Rust.
-
-Per-asset balancing, atomic PostgreSQL writes, idempotency, event replay, and reconciliation, backed by unit and property tests. Basically, making sure money doesn't magically appear or disappear because two requests arrived at the same time.
+A Rust double-entry ledger with per-asset balancing, atomic PostgreSQL writes, idempotency, replay and reconciliation, backed by unit and property tests. Making sure money doesn't magically appear or disappear because two requests arrived at the same time.
 
 ###  [SiteProof](https://github.com/demis1997/siteproof)
 
-An AI-powered website auditor that doesn't just tell you your website needs work.
-
-It audits pages, proposes redesigns, and checks whether the changes actually pass before they're accepted. Tenant boundaries, SSRF protections, isolated browser capture, bounded repairs, and human acceptance are part of the design.
-
-Because "the AI said it looks better" isn't exactly a testing strategy.
+An AI website auditor with tenant boundaries, SSRF protection, isolated browser capture and checked redesigns. Because "the AI said it looks better" is not a testing strategy.
 
 ###  [cryptoanalyzer](https://github.com/demis1997/cryptoanalyzer)
 
-A DeFi research workbench for digging into protocols, documents, and on-chain information.
-
-Combines protocol adapters, document ingestion, graph-based data, and source-aware scoring. Source provenance and explicit missing inputs make the reasoning inspectable and research a little less painful.
-
-Still a research tool, not a crystal ball for predicting financial risk.
+A DeFi research workbench combining protocol adapters, document ingestion, graph data and source-aware scoring. Research with inspectable sources and explicit gaps, not a crystal ball for predicting financial risk.
 
 ###  [Iris Sales Coach](https://github.com/demis1997/iris-sales-coach)
 
-An AI sales-coaching prototype built around versioned prompts, typed model interfaces, permission checks, and repeatable mock-provider tests.
-
-The idea is simple: help salespeople get better without making them sit through another three-hour training presentation.
+An AI sales-coaching prototype with versioned prompts, typed interfaces, permission checks and repeatable mock-provider tests. Helping salespeople improve without another three-hour training presentation.
 
 ###  [Canopy AI](https://github.com/demis1997/canopy-AI)
 
-An AI reply and sales copilot for creator agencies.
-
-Organization-scoped data, encrypted provider credentials, deterministic product and safety checks, and human review put boundaries around conversation context and AI suggestions. A surprisingly interesting mix of AI orchestration, business logic, and trying to make software sound less like software.
+An AI reply and sales copilot with organization-scoped data, encrypted provider credentials, deterministic checks and human review. A mix of AI orchestration, business logic and trying to make software sound less like software.
 
 ##  Security Research & Engineering Interests
 
