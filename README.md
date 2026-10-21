@@ -12,7 +12,7 @@ I build with **Rust, Python, TypeScript, and Solidity**, use **static analysis, 
 
 When I'm not staring at a terminal, you'll probably find me boxing, riding, or doing random sidequests.
 
-[Security research](#-featured-security-research) · [Current work](#currently-working-on) · [Open source](#-open-source-security-contributions) · [Projects](#-other-engineering-projects)
+[Security research](#featured-security-research) · [Current work](#currently-working-on) · [Open source](#open-source-security-contributions) · [Projects](#other-engineering-projects)
 
 ## Featured Security Research
 
