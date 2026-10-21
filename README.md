@@ -6,11 +6,55 @@
 
 I build things that are supposed to be difficult to break. And occasionally things that break in very interesting ways.
 
-My home turf is **security architecture, application security, and blockchain infrastructure**: digital asset custody, tokenization, **MPC, threshold ECDSA, HSMs, and cryptographic key management**.
+My focus is **blockchain security architecture and institutional digital asset custody**: MPC and threshold cryptography, Solidity and smart contract security, post quantum cryptography, and secure infrastructure and cloud architecture. I study how key protection, transaction authority, and recovery hold up under compromise.
 
 I build with **Rust, Python, TypeScript, and Solidity**, use **static analysis, fuzzing, and security testing** to challenge the happy path, and work across distributed systems and AI infrastructure.
 
 When I'm not staring at a terminal, you'll probably find me boxing, riding, or doing random sidequests.
+
+[Security research](#-featured-security-research) · [Current work](#currently-working-on) · [Open source](#-open-source-security-contributions) · [Projects](#-other-engineering-projects)
+
+## 📄 Featured Security Research
+
+### [Securing Institutional Digital Asset Custody](https://github.com/demis1997/institutional-custody-security-research)
+
+*Private Keys, Distributed Trust, and the Uncomfortable Arrival of Quantum Computing*
+
+Research examining how MPC signing, authorization policies, distributed state, and recovery mechanisms interact under adversarial conditions. Includes reproducible application experiments, Ethereum transaction authorization analysis, verification microbenchmarks, and a proposed post quantum migration architecture.
+
+The evidence distinguishes executed tests and a synthetic local-chain transfer from declared models and unexecuted native MPC scenarios. This is independent research, not a production custody certification.
+
+**[Read Paper](https://github.com/demis1997/institutional-custody-security-research/blob/main/paper/custody-security-research.pdf)** · [Research Repository](https://github.com/demis1997/institutional-custody-security-research) · [Quorum Custody Implementation](https://github.com/demis1997/quorum-custody)
+
+## Currently Working On
+
+### Securing Institutional Digital Asset Custody on AWS
+
+Exploring how to deploy and secure custody infrastructure across independent AWS trust domains. This is ongoing design and research, not a completed production deployment.
+
+Planned focus:
+
+- Isolate MPC participants across AWS accounts and security boundaries.
+- Evaluate AWS KMS and CloudHSM for key protection, starting with the actual MPC interface.
+- Design independent authorization and transaction policy enforcement.
+- Secure signer communication with mutual TLS.
+- Develop recovery, backup, and key rotation procedures.
+- Evaluate IAM, VPC isolation, audit logging, and infrastructure security.
+- Test failure recovery and compromise scenarios in an isolated lab.
+
+[Quorum Custody](https://github.com/demis1997/quorum-custody) · [AWS Institutional Custody Security Lab roadmap](https://github.com/demis1997/institutional-custody-security-research/blob/main/docs/AWS_CUSTODY_SECURITY_LAB_ROADMAP.md)
+
+A dedicated AWS architecture repository is planned. In parallel, I am researching hybrid post quantum custody authorization and migration paths that preserve spending and recovery boundaries.
+
+## 🔐 Custody Engineering
+
+### 🔐 [Quorum Custody](https://github.com/demis1997/quorum-custody)
+
+A local Ethereum custody demo built around **2-of-3 threshold ECDSA** and Coinbase's cb-mpc, with separate signer processes.
+
+Independent transaction approvals, signer-side policy checks, mutual TLS, and durable recovery paths make the trust boundaries concrete. Even with one signer offline, the remaining two can still get the job done.
+
+Turns out keeping private keys out of the wrong hands is a pretty interesting engineering problem.
 
 ## 🔎 Open Source Security Contributions
 
@@ -29,17 +73,9 @@ Solidity static-analysis contributions focused on gas efficiency, conservative d
 - **Open · [#3123](https://github.com/crytic/slither/pull/3123)** — add conservative cacheable-accumulator metadata to existing `costly-loop` findings.
 - **Closed, unmerged · [#1707](https://github.com/crytic/slither/pull/1707)** — earlier gas-optimization detector proposal.
 
-*PR statuses checked 20 October 2026; open proposals are not merged features.*
+*PR statuses checked 21 October 2026; open proposals are not merged features.*
 
-## 🚀 Things I've been building
-
-### 🔐 [Quorum Custody](https://github.com/demis1997/quorum-custody)
-
-A local Ethereum custody demo built around **2-of-3 threshold ECDSA** and Coinbase's cb-mpc, with separate signer processes.
-
-Independent transaction approvals, signer-side policy checks, mutual TLS, and durable recovery paths make the trust boundaries concrete. Even with one signer offline, the remaining two can still get the job done.
-
-Turns out keeping private keys out of the wrong hands is a pretty interesting engineering problem.
+## 🚀 Other Engineering Projects
 
 ### 🦀 [IronLedger](https://github.com/demis1997/IronLedger)
 
@@ -81,7 +117,8 @@ Current questions I'm exploring, usually with a threat model or a test harness n
 
 - **Digital asset custody threat modeling:** signer trust boundaries, recovery, and MPC/HSM security.
 - **Application security:** static analysis, vulnerability detection, fuzzing, and useful regression tests.
-- **Cryptographic protocol security:** including what post-quantum cryptography could look like in EVM ecosystems.
+- **Cryptographic protocol security:** hybrid authorization, post quantum custody migration, and the limits of current EVM account models.
+- **Secure infrastructure:** independent signer administration, cloud identity, protected recovery, and observable failure handling.
 
 ## 🛠️ Things I work with
 
