@@ -1,4 +1,4 @@
-# Hey, I'm Dimitris 👋
+# Hey, I'm Dimitris 
 
 <p align="center">
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGk3MTBkbnIwcmo2dGFtdDgzcWYwcHE2Y2Y2YnBpcm11M3Vlb25udiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/11KzOet1ElBDz2/giphy.gif" alt="Spike Spiegel — Cowboy Bebop" width="450" />
@@ -14,7 +14,7 @@ When I'm not staring at a terminal, you'll probably find me boxing, riding, or d
 
 [Security research](#-featured-security-research) · [Current work](#currently-working-on) · [Open source](#-open-source-security-contributions) · [Projects](#-other-engineering-projects)
 
-## 📄 Featured Security Research
+## Featured Security Research
 
 ### [Securing Institutional Digital Asset Custody](https://github.com/demis1997/institutional-custody-security-research)
 
@@ -46,9 +46,9 @@ Planned focus:
 
 A dedicated AWS architecture repository is planned. In parallel, I am researching hybrid post quantum custody authorization and migration paths that preserve spending and recovery boundaries.
 
-## 🔐 Custody Engineering
+##  Custody Engineering
 
-### 🔐 [Quorum Custody](https://github.com/demis1997/quorum-custody)
+###  [Quorum Custody](https://github.com/demis1997/quorum-custody)
 
 A local Ethereum custody demo built around **2-of-3 threshold ECDSA** and Coinbase's cb-mpc, with separate signer processes.
 
@@ -56,7 +56,7 @@ Independent transaction approvals, signer-side policy checks, mutual TLS, and du
 
 Turns out keeping private keys out of the wrong hands is a pretty interesting engineering problem.
 
-## 🔎 Open Source Security Contributions
+##  Open Source Security Contributions
 
 ### [Semgrep](https://github.com/semgrep/semgrep)
 
@@ -75,15 +75,15 @@ Solidity static-analysis contributions focused on gas efficiency, conservative d
 
 *PR statuses checked 21 October 2026; open proposals are not merged features.*
 
-## 🚀 Other Engineering Projects
+##  Other Engineering Projects
 
-### 🦀 [IronLedger](https://github.com/demis1997/IronLedger)
+###  [IronLedger](https://github.com/demis1997/IronLedger)
 
 A double-entry financial ledger written in Rust.
 
 Per-asset balancing, atomic PostgreSQL writes, idempotency, event replay, and reconciliation, backed by unit and property tests. Basically, making sure money doesn't magically appear or disappear because two requests arrived at the same time.
 
-### 🤖 [SiteProof](https://github.com/demis1997/siteproof)
+###  [SiteProof](https://github.com/demis1997/siteproof)
 
 An AI-powered website auditor that doesn't just tell you your website needs work.
 
@@ -91,7 +91,7 @@ It audits pages, proposes redesigns, and checks whether the changes actually pas
 
 Because "the AI said it looks better" isn't exactly a testing strategy.
 
-### 📊 [cryptoanalyzer](https://github.com/demis1997/cryptoanalyzer)
+###  [cryptoanalyzer](https://github.com/demis1997/cryptoanalyzer)
 
 A DeFi research workbench for digging into protocols, documents, and on-chain information.
 
@@ -99,19 +99,19 @@ Combines protocol adapters, document ingestion, graph-based data, and source-awa
 
 Still a research tool, not a crystal ball for predicting financial risk.
 
-### 🎙️ [Iris Sales Coach](https://github.com/demis1997/iris-sales-coach)
+###  [Iris Sales Coach](https://github.com/demis1997/iris-sales-coach)
 
 An AI sales-coaching prototype built around versioned prompts, typed model interfaces, permission checks, and repeatable mock-provider tests.
 
 The idea is simple: help salespeople get better without making them sit through another three-hour training presentation.
 
-### 💬 [Canopy AI](https://github.com/demis1997/canopy-AI)
+###  [Canopy AI](https://github.com/demis1997/canopy-AI)
 
 An AI reply and sales copilot for creator agencies.
 
 Organization-scoped data, encrypted provider credentials, deterministic product and safety checks, and human review put boundaries around conversation context and AI suggestions. A surprisingly interesting mix of AI orchestration, business logic, and trying to make software sound less like software.
 
-## 🧭 Security Research & Engineering Interests
+##  Security Research & Engineering Interests
 
 Current questions I'm exploring, usually with a threat model or a test harness nearby:
 
@@ -120,7 +120,7 @@ Current questions I'm exploring, usually with a threat model or a test harness n
 - **Cryptographic protocol security:** hybrid authorization, post quantum custody migration, and the limits of current EVM account models.
 - **Secure infrastructure:** independent signer administration, cloud identity, protected recovery, and observable failure handling.
 
-## 🛠️ Things I work with
+##  Things I work with
 
 ### Languages
 
