@@ -6,7 +6,7 @@
 
 I build things that are supposed to be difficult to break. And occasionally things that break in very interesting ways.
 
-My focus is **blockchain security architecture and institutional digital asset custody**: MPC and threshold cryptography, Solidity and smart contract security, post quantum cryptography, and secure infrastructure and cloud architecture. I study how key protection, transaction authority, and recovery hold up under compromise.
+My focus is **institutional digital asset custody and blockchain security architecture**: MPC, threshold signing, transaction policy enforcement, recovery security, and Ethereum. I build custody prototypes and study where signing authority, approval policy, and distributed state stop agreeing. My research also examines HSM trust boundaries and post-quantum migration.
 
 I build with **Rust, Python, TypeScript, and Solidity**, use **static analysis, fuzzing, and security testing** to challenge the happy path, and work across distributed systems and AI infrastructure.
 
@@ -14,19 +14,33 @@ When I'm not staring at a terminal, you'll probably find me boxing, riding, or d
 
 **[Security Research Index](https://github.com/demis1997/institutional-custody-security-research/blob/main/RESEARCH_INDEX.md)**
 
-[Security research](#featured-security-research) · [Current work](#currently-working-on) · [Open source](#open-source-security-contributions) · [Projects](#other-engineering-projects)
+[Published research](#published-security-research) · [Custody engineering](#custody-engineering) · [Current research](#currently-working-on) · [Open source](#open-source-security-contributions) · [Projects](#other-engineering-projects)
 
-## Featured Security Research
+## Published Security Research
 
-### [Securing Institutional Digital Asset Custody](https://github.com/demis1997/institutional-custody-security-research)
+### Securing Institutional Digital Asset Custody: Private Keys, Distributed Trust, and the Uncomfortable Arrival of Quantum Computing
 
-*Private Keys, Distributed Trust, and the Uncomfortable Arrival of Quantum Computing*
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23577319.svg)](https://doi.org/10.5281/zenodo.23577319)
 
-Research examining how MPC signing, authorization policies, distributed state, and recovery mechanisms interact under adversarial conditions. Includes reproducible application experiments, Ethereum transaction authorization analysis, verification microbenchmarks, and a proposed post quantum migration architecture.
+**Dimitris Konstantinou · Independent research preprint · 21 October 2026**
 
-The evidence distinguishes executed tests and a synthetic local-chain transfer from declared models and unexecuted native MPC scenarios. This is independent research, not a production custody certification.
+How do MPC/HSM custody architectures preserve transaction authorization, spending history, and recovery security when trust domains fail? This paper studies those boundaries in an Ethereum custody prototype and proposes a post-quantum migration path covering spending, upgrades, and recovery.
 
-**[Read Paper](https://github.com/demis1997/institutional-custody-security-research/blob/main/paper/custody-security-research.pdf)** · [Research Repository](https://github.com/demis1997/institutional-custody-security-research) · [Quorum Custody Implementation](https://github.com/demis1997/quorum-custody)
+The evidence includes 26 repeated unit tests, a divergent spending-history model, approval expiry experiments on local Anvil, recovery function experiments, and local post-quantum verification benchmarks. Executed results are separated from source analysis and proposed architecture; no full MPC integration, HSM deployment, or Ethereum post-quantum gas benchmark is claimed by the paper.
+
+**[Published paper](https://zenodo.org/records/23577319)** · [PDF](https://zenodo.org/records/23577319/files/custody-security-research.pdf?download=1) · [Research repository & reproduction](https://github.com/demis1997/institutional-custody-security-research)
+
+Supporting engineering: **[Quorum Custody](https://github.com/demis1997/quorum-custody)**, my local Ethereum implementation using 2-of-3 threshold ECDSA, independent approvals, signer-side policy checks, and recovery workflows.
+
+## Custody Engineering
+
+### [Quorum Custody](https://github.com/demis1997/quorum-custody)
+
+A local Ethereum custody demo built around **2-of-3 threshold ECDSA** and Coinbase's cb-mpc, with separate signer processes.
+
+Independent transaction approvals, signer-side policy checks, mutual TLS, and durable recovery paths make the trust boundaries concrete. The design separates approval authority from threshold signing and records transaction state through submission and reconciliation. Its signer processes currently share one host account; HSM integration and independent administration remain future work.
+
+Turns out keeping private keys out of the wrong hands is a pretty interesting engineering problem.
 
 ## Currently Working On
 
@@ -38,19 +52,9 @@ The tests distinguish one compromised signer from a signing quorum, shared deplo
 
 [Explore the lab](https://github.com/demis1997/aws-custody-security-lab) · [Validation evidence](https://github.com/demis1997/aws-custody-security-lab/blob/main/VALIDATION_REPORT.md) · [Quorum Custody](https://github.com/demis1997/quorum-custody)
 
-Ongoing post quantum custody research examines hybrid authorization and migration paths that preserve spending and recovery boundaries.
+Ongoing post-quantum custody research examines hybrid authorization and migration paths that preserve spending and recovery boundaries.
 
-##  Custody Engineering
-
-###  [Quorum Custody](https://github.com/demis1997/quorum-custody)
-
-A local Ethereum custody demo built around **2-of-3 threshold ECDSA** and Coinbase's cb-mpc, with separate signer processes.
-
-Independent transaction approvals, signer-side policy checks, mutual TLS, and durable recovery paths make the trust boundaries concrete. Even with one signer offline, the remaining two can still get the job done.
-
-Turns out keeping private keys out of the wrong hands is a pretty interesting engineering problem.
-
-##  Open Source Security Contributions
+## Open Source Security Contributions
 
 ### [Semgrep](https://github.com/semgrep/semgrep)
 
@@ -58,7 +62,7 @@ Turns out keeping private keys out of the wrong hands is a pretty interesting en
 
 ### [Slither](https://github.com/crytic/slither)
 
-Solidity static-analysis contributions focused on gas efficiency, conservative detection, and regression tests:
+Proposed Solidity static-analysis improvements focused on gas efficiency, conservative detection, and regression tests:
 
 - **Open · [#3119](https://github.com/crytic/slither/pull/3119)** — detect literal revert strings eligible for custom errors, with error-ABI caveats.
 - **Open · [#3120](https://github.com/crytic/slither/pull/3120)** — identify fixed-size storage layouts that can use fewer slots; restrict suggestions to fresh layouts.
@@ -67,7 +71,7 @@ Solidity static-analysis contributions focused on gas efficiency, conservative d
 - **Open · [#3123](https://github.com/crytic/slither/pull/3123)** — add conservative cacheable-accumulator metadata to existing `costly-loop` findings.
 - **Closed, unmerged · [#1707](https://github.com/crytic/slither/pull/1707)** — earlier gas-optimization detector proposal.
 
-*PR statuses checked 21 October 2026; open proposals are not merged features.*
+*PR statuses verified against GitHub on 22 October 2026. All six open PRs above are unmerged proposals; #1707 is closed without merge.*
 
 ##  Other Engineering Projects
 
@@ -97,7 +101,7 @@ Current questions I'm exploring, usually with a threat model or a test harness n
 
 - **Digital asset custody threat modeling:** signer trust boundaries, recovery, and MPC/HSM security.
 - **Application security:** static analysis, vulnerability detection, fuzzing, and useful regression tests.
-- **Cryptographic protocol security:** hybrid authorization, post quantum custody migration, and the limits of current EVM account models.
+- **Cryptographic protocol security:** hybrid authorization, post-quantum custody migration, and the limits of current EVM account models.
 - **Secure infrastructure:** independent signer administration, cloud identity, protected recovery, and observable failure handling.
 
 ##  Things I work with
